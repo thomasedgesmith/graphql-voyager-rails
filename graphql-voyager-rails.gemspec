@@ -14,18 +14,18 @@ Gem::Specification.new do |spec|
   spec.description = "A rails engine for easily mounting Graphql Voyager."
   spec.license     = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  spec.required_ruby_version = '>= 2.1.0' # bc optional keyword args
 
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
+  spec.test_files = Dir["test/**/*"]
 
-  spec.add_dependency "rails", "~> 6.0.0.rc1"
+  spec.add_runtime_dependency "railties"
+  spec.add_runtime_dependency "sprockets-rails"
 
+  spec.add_development_dependency "rails"
   spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "minitest", "~> 5"
+  spec.add_development_dependency "minitest-focus", "~> 1.1"
+  spec.add_development_dependency "minitest-reporters", "~>1.0"
+  spec.add_development_dependency "rake", "~> 11.0"
 end
