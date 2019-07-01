@@ -12,6 +12,7 @@ Simply mount GraphQL Voyager in your `config/routes.rb`:
 if Rails.env.development?
   mount Graphql::Voyager::Rails::Engine, at: "/graphql-voyager", graphql_path: "/graphql"
 end
+```
 
 Now you should be able to access GraphQL Voyager at: `http://localhost:3000/graphql-voyager`.
 
