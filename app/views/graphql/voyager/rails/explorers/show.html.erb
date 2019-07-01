@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Graphql Voyager</title>
+    <%= stylesheet_link_tag("graphql/voyager/rails/application") %>
+    <%= javascript_include_tag("graphql/voyager/rails/application") %>
+  </head>
+  <body>
+    <div id="voyager">Loading...</div>
+    <script>
+      function introspectionProvider(introspectionQuery) {
+        return fetch('<%= graphql_endpoint_path %>', {
+          method: 'post',
+          headers: <%= Graphql::Voyager::Rails.config.resolve_headers(self).to_json.html_safe %>,
+          body: JSON.stringify({query: introspectionQuery}),
+          credentials: 'include',
+        }).then(function (response) {
+          return response.text();
+        }).then(function (responseBody) {
+          try {
+            return JSON.parse(responseBody);
+          } catch (error) {
+            return responseBody;
+          }
+        });
+      }
+
+      GraphqlVoyager.init(document.getElementById('voyager'), {
+        introspection: introspectionProvider,
+        workerURI: '<%= asset_path("graphql/voyager/rails/voyager.js") %>',
+      });
+    </script>
+  </body>
+</html>

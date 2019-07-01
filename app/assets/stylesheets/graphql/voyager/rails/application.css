@@ -1,0 +1,14 @@
+/*
+ = require ./voyager-1.0.0-rc.27
+*/
+
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#voyager {
+  height: 100vh;
+}
