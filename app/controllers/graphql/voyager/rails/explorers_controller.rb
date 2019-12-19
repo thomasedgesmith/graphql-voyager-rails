@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Graphql
+module GraphQL
   module Voyager
     module Rails
       class ExplorersController < ActionController::Base
