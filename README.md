@@ -12,7 +12,7 @@ Mount GraphQL Voyager in your `config/routes.rb`:
 mount Graphql::Voyager::Rails::Engine, at: "/graphql-voyager", graphql_path: "/graphql"
 ```
 
-Precompile your assets in your `config/application.rb`:
+Precompile assets in your `config/application.rb`:
 ```ruby
 config.assets.precompile += [
   'graphql/voyager/rails/application.css',
