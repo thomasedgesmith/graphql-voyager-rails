@@ -3,7 +3,7 @@
 # Originally based on GrapiQL Rails Config
 # https://github.com/rmosolgo/graphiql-rails/blob/5770e774f9da754aa8c1eee5651d6c663ca8e2a2/lib/graphiql/rails/config.rb
 
-module Graphql
+module GraphQL
   module Voyager
     module Rails
       class Config

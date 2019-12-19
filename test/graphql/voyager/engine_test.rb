@@ -2,12 +2,12 @@
 
 require "test_helper"
 
-module Graphql
+module GraphQL
   module Voyager
     module Rails
       class EngineTest < ActiveSupport::TestCase
         test "it is defined" do
-          assert Graphql::Voyager::Rails::Engine
+          assert GraphQL::Voyager::Rails::Engine
         end
       end
     end

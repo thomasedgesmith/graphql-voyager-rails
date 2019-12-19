@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Graphql Voyager</title>
+    <title>GraphQL Voyager</title>
     <%= stylesheet_link_tag("graphql/voyager/rails/application") %>
     <%= javascript_include_tag("graphql/voyager/rails/application") %>
   </head>
@@ -11,7 +11,7 @@
       function introspectionProvider(introspectionQuery) {
         return fetch('<%= graphql_endpoint_path %>', {
           method: 'post',
-          headers: <%= Graphql::Voyager::Rails.config.resolve_headers(self).to_json.html_safe %>,
+          headers: <%= GraphQL::Voyager::Rails.config.resolve_headers(self).to_json.html_safe %>,
           body: JSON.stringify({query: introspectionQuery}),
           credentials: 'include',
         }).then(function (response) {
