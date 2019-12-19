@@ -11,5 +11,10 @@ Bundler.require(*Rails.groups)
 
 module Dummy
   class Application < Rails::Application
+    config.assets.precompile += [
+      'graphql/voyager/rails/application.css',
+      'graphql/voyager/rails/application.js',
+      'graphql/voyager/rails/voyager.js'
+    ]
   end
 end
