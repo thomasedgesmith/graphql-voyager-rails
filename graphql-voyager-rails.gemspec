@@ -22,11 +22,9 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "railties"
   spec.add_runtime_dependency "sprockets-rails"
 
-  spec.add_development_dependency "codeclimate-test-reporter", '~>0.4'
   spec.add_development_dependency "rails"
   spec.add_development_dependency "minitest", "~> 5"
   spec.add_development_dependency "minitest-focus", "~> 1.1"
   spec.add_development_dependency "minitest-reporters", "~>1.0"
   spec.add_development_dependency "rake", "~> 11.0"
-  spec.add_development_dependency "salsify_rubocop", '>= 0.62.0'
 end
