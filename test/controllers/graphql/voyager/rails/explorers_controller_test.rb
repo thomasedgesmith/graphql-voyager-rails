@@ -1,16 +1,17 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 
-module Graphql
+module GraphQL
   module Voyager
     module Rails
       class ExplorersControllerTest < ActionController::TestCase
         setup do
-          @routes = Graphql::Voyager::Rails::Engine.routes
+          @routes = GraphQL::Voyager::Rails::Engine.routes
         end
 
         teardown do
-          Graphql::Voyager::Rails.config.headers = {}
+          GraphQL::Voyager::Rails.config.headers = {}
         end
 
         def graphql_params
@@ -25,7 +26,7 @@ module Graphql
         end
 
         test 'it renders headers' do
-          Graphql::Voyager::Rails.config.headers['Nonsense-Header'] = ->(_view_ctx) { 'Value' }
+          GraphQL::Voyager::Rails.config.headers['Nonsense-Header'] = ->(_view_ctx) { 'Value' }
           get :show, graphql_params
           assert_includes(@response.body, %(\"Nonsense-Header\":\"Value\"))
           assert_includes(@response.body, %(\"X-CSRF-Token\"))

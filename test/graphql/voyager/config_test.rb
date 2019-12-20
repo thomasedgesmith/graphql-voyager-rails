@@ -1,8 +1,8 @@
-# frozen_string_literal: ture
+# frozen_string_literal: true
 
 require "test_helper"
 
-module Graphql
+module GraphQL
   module Voyager
     module Rails
       class ConfigTest < ActiveSupport::TestCase
@@ -13,7 +13,7 @@ module Graphql
         end
 
         setup do
-          @config = Graphql::Voyager::Rails::Config.new
+          @config = GraphQL::Voyager::Rails::Config.new
           @view_context = MockViewContext.new
         end
 

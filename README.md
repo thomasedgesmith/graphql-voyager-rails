@@ -6,12 +6,19 @@ Easily mount [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) on 
 
 ## Usage
 
-Simply mount GraphQL Voyager in your `config/routes.rb`:
+Mount GraphQL Voyager in your `config/routes.rb`:
 
 ```ruby
-if Rails.env.development?
-  mount Graphql::Voyager::Rails::Engine, at: "/graphql-voyager", graphql_path: "/graphql"
-end
+mount Graphql::Voyager::Rails::Engine, at: "/graphql-voyager", graphql_path: "/graphql"
+```
+
+Precompile assets in your `config/application.rb`:
+```ruby
+config.assets.precompile += [
+  'graphql/voyager/rails/application.css',
+  'graphql/voyager/rails/application.js',
+  'graphql/voyager/rails/voyager.js'
+]
 ```
 
 Now you should be able to access GraphQL Voyager at: `http://localhost:3000/graphql-voyager`.

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    graphql-voyager-rails (0.1.0)
+    graphql-voyager-rails (1.0.0)
       railties
       sprockets-rails
 
@@ -132,7 +132,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.1)
     thor (0.20.3)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
@@ -152,7 +151,6 @@ DEPENDENCIES
   minitest-reporters (~> 1.0)
   rails
   rake (~> 11.0)
-  sqlite3
 
 BUNDLED WITH
    2.0.2

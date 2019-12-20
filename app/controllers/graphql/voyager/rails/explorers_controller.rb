@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Graphql
+module GraphQL
   module Voyager
     module Rails
       class ExplorersController < ActionController::Base
@@ -10,7 +10,7 @@ module Graphql
         end
 
         def graphql_endpoint_path
-          params[:graphql_path] || raise(%|You must include `graphql_path: "/my/endpoint"` when mounting Graphql::Voyager::Rails::Engine|)
+          params[:graphql_path] || raise(%|You must include `graphql_path: "/my/endpoint"` when mounting GraphQL::Voyager::Rails::Engine|)
         end
       end
     end
