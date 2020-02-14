@@ -355,7 +355,7 @@
   border-left: 3px solid transparent
 }
 
-.doc-category > .item > description-box {
+.doc-category > .item > .description-box {
   .margin-top: 5px;
 }
 

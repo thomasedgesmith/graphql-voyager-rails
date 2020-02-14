@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    graphql-voyager-rails (1.0.1)
+    graphql-voyager-rails (1.0.2)
       railties
       sprockets-rails
 
@@ -153,4 +153,4 @@ DEPENDENCIES
   rake (~> 11.0)
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
