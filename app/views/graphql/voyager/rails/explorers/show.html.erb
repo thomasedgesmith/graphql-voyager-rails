@@ -11,7 +11,7 @@
       function introspectionProvider(introspectionQuery) {
         return fetch('<%= graphql_endpoint_path %>', {
           method: 'post',
-          headers: <%= GraphQL::Voyager::Rails.config.resolve_headers(self).to_json.html_safe %>,
+          headers: <%= Graphql::Voyager::Rails.config.resolve_headers(self).to_json.html_safe %>,
           body: JSON.stringify({query: introspectionQuery}),
           credentials: 'include',
         }).then(function (response) {

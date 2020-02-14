@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-module GraphQL
+module Graphql
   module Voyager
     module Rails
       class ConfigTest < ActiveSupport::TestCase
@@ -13,7 +13,7 @@ module GraphQL
         end
 
         setup do
-          @config = GraphQL::Voyager::Rails::Config.new
+          @config = Graphql::Voyager::Rails::Config.new
           @view_context = MockViewContext.new
         end
 
