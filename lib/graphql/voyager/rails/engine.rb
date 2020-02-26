@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module GraphQL
+module Graphql
   module Voyager
     module Rails
       class Engine < ::Rails::Engine
-        isolate_namespace GraphQL::Voyager::Rails
+        isolate_namespace Graphql::Voyager::Rails
       end
     end
   end

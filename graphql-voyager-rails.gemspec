@@ -6,7 +6,7 @@ require "graphql/voyager/rails/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = "graphql-voyager-rails"
-  spec.version     = GraphQL::Voyager::Rails::VERSION
+  spec.version     = Graphql::Voyager::Rails::VERSION
   spec.authors     = ["Thomas McGoey-Smith"]
   spec.email       = ["hey@thomas.codes"]
   spec.homepage    = "https://github.com/tamcgoey/graphql-voyager-rails"

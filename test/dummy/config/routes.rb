@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount GraphQL::Voyager::Rails::Engine => "/graphql-voyager-rails"
+  mount Graphql::Voyager::Rails::Engine => "/graphql-voyager-rails"
 end
